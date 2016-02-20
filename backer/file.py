@@ -28,6 +28,7 @@ class FileBacker:
     def backup(self):
         for path in self.setting['include'].split(','):
             self.backup_dir(os.path.join(self.setting['root_dir'], path))
+        return self.tar.name
 
     def __del__(self):
         self.tar.close()

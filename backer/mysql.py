@@ -3,5 +3,8 @@ class MysqlBacker:
         self.setting = setting
 
     def backup(self):
-        pass
+        if not self.setting['db_name']:
+            pass
+        else:
+            pass
 
